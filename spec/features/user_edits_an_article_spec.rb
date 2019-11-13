@@ -12,7 +12,7 @@ describe 'user edits an article' do
 
         fill_in 'article[title]', with: 'Updated Title!'
 
-        click_link 'Submit Changes'
+        click_on 'Update Article'
 
         expect(current_path).to eq(article_path(article))
 
