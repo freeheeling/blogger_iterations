@@ -8,10 +8,10 @@ describe 'user sees one tag' do
 
       visit article_path(article)
 
-      click_link 'Name'
+      click_link tag.name
 
       expect(current_path).to eq(tag_path(tag))
-      expect(page).to have_content('Name')
+      expect(page).to have_content(tag.name)
     end
   end
 end
